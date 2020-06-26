@@ -1,0 +1,9 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (LCS.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  LCS.cpp
+C:\LearningAndWorking\Exercises\DSACPP\LCS\headFiles\LCS.h(12,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\LearningAndWorking\Exercises\DSACPP\LCS\headFiles\LCS.h(12,44): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\LearningAndWorking\Exercises\DSACPP\LCS\headFiles\LCS.h(38,25): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\LearningAndWorking\Exercises\DSACPP\LCS\headFiles\LCS.h(38,46): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\LearningAndWorking\Exercises\DSACPP\LCS\headFiles\LCS.h(61,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\LearningAndWorking\Exercises\DSACPP\LCS\headFiles\LCS.h(61,47): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  LCS.vcxproj -> C:\LearningAndWorking\Exercises\DSACPP\x64\Debug\LCS-DP0.exe

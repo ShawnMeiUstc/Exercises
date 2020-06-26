@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 // 递归思路：从后向前，若s1， s2最后字符相等，则最长子串为（s1-1）与（s2-1）的最长子串，
 // 若最后字符不等，则为（s1-1，s2）与（s1，s2-1）之更长者。
@@ -44,13 +45,9 @@ std::vector<std::vector<int>> LCSIter(const std::string& s1, const std::string& 
 			{
 				rec[i + 1][j + 1] = rec[i][j] + 1;
 			}
-			else if (rec[i + 1][j] >= rec[i][j + 1]) // 相等取同行左列值
+			else  // 相等取同行左列值,std::max比较两个相等值时返回左边值
 			{
-				rec[i + 1][j + 1] = rec[i + 1][j];
-			}
-			else
-			{
-				rec[i + 1][j + 1] = rec[i][j + 1];
+				rec[i + 1][j + 1] = std::max(rec[i + 1][j], rec[i][j + 1]);
 			}
 		}
 	}

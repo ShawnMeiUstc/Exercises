@@ -24,6 +24,7 @@
     <ProjectGuid>{46f0822f-2dad-4720-a7a7-13a255259334}</ProjectGuid>
     <RootNamespace>LCS</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>LCS-DP0</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
