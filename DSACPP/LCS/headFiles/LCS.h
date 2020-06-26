@@ -82,3 +82,34 @@ void printLCS(const std::vector<std::vector<int>>& rec, const std::string& s1)
 	}
 	std::cout << std::endl;
 }
+
+
+// 最长连续公共子序列：用maxLen记录当前最长公共子串长度，rec表记录子串长度，对s1和s2，若最后字符相同，则子串长度加一，
+// 若不相同，maxLen的值取max（当前值，maxLen）,rec表对应的值取0
+
+std::pair<int, int> LCCS(const std::string& s1, const std::string& s2)
+{
+	int maxLen = 0, sub = 0;
+	std::vector<std::vector<int>> rec(s1.length() + 1, std::vector<int>(s2.length() + 1, 0));
+	for (int i = 0; i != s1.length(); ++i)
+	{
+		for (int j = 0; j != s2.length(); ++j)
+		{
+			if (s1[i] == s2[j])
+			{
+				rec[i + 1][j + 1] = rec[i][j] + 1;
+			}
+			else
+			{
+				rec[i + 1][j + 1] = 0;
+			}
+
+			if (maxLen < rec[i + 1][j + 1])
+			{
+				maxLen = rec[i + 1][j + 1];
+				sub = i;
+			}
+		}
+	}
+	return std::make_pair(maxLen, sub);
+}
